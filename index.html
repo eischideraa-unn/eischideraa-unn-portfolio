@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chidera Agbo | Fullstack Developer & Content Strategist</title>
+  
+  <!-- SEO -->
+  <meta name="description" content="Portfolio of Chidera Agbo, a Fullstack Developer and Web3 Content Strategist based in Nigeria. I build dApps, write technical content, and manage Web3 communities.">
+  <meta name="keywords" content="Chidera Agbo, Fullstack Developer, Web3, Content Strategy, React, Node.js, Polkadot, Crypto">
+  <meta name="author" content="Chidera Agbo">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Chidera Agbo | Builder & Storyteller">
+  <meta property="og:description" content="I design and ship products, write content that doesn't read like AI, and run the social channels that get people talking about both.">
+  <meta property="og:image" content="https://eischideraa-unn.github.io/Assets/Personal%20pfp.jpg"> <!-- Ensure this URL is correct upon deployment -->
+  <meta property="og:url" content="https://eischideraa-unn.github.io/"> <!-- Update with your actual site URL -->
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="./Assets/Ninja pfp.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="min-h-screen flex flex-col px-5 sm:px-8 md:px-12 pt-6 md:pt-8 pb-8 relative">
+
+    <!-- NAV -->
+    <nav class="reveal flex items-center justify-between text-sm md:text-base">
+      <a href="#" class="mono font-medium tracking-widest">CA<span class="text-[var(--pink)]">_</span></a>
+      <div class="hidden sm:flex items-center gap-8 md:gap-12 uppercase tracking-widest text-xs md:text-sm"
+        style="color:var(--muted)">
+        <a href="#about" class="nav-link hover:text-[var(--text)] transition-colors duration-200">About</a>
+        <a href="#services" class="nav-link hover:text-[var(--text)] transition-colors duration-200">Services</a>
+        <a href="#work" class="nav-link hover:text-[var(--text)] transition-colors duration-200">Proof of Work</a>
+        <a href="#contact" class="nav-link hover:text-[var(--text)] transition-colors duration-200">Contact</a>
+        <button id="theme-toggle" class="cursor-pointer">
+          <!-- Sun Icon -->
+          <svg id="sun-icon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+          <!-- Moon Icon -->
+          <svg id="moon-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+        </button>
+      </div>
+      <a href="#contact" class="sm:hidden uppercase tracking-widest text-xs" style="color:var(--muted)">Menu</a>
+    </nav>
+
+    <!-- HEADLINE -->
+    <div class="flex-1 flex flex-col justify-center mt-10 md:mt-0">
+      <p class="reveal mono uppercase tracking-[0.3em] text-xs md:text-sm mb-3" style="color:var(--muted)">Portfolio —
+        Enugu, Nigeria</p>
+      <h1 class="reveal grad-text font-extrabold uppercase leading-[0.95] tracking-tight"
+        style="font-size:clamp(2.8rem,12vw,8.5rem);">
+        Chidera<br />Agbo
+      </h1>
+
+      <div class="reveal mt-6 md:mt-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-8">
+        <!-- terminal role rotator -->
+        <div class="mono text-sm sm:text-base md:text-lg" style="color:var(--text)">
+          <span style="color:var(--muted)">const</span> <span style="color:var(--amber)">role</span> <span
+            style="color:var(--muted)">=</span>
+          <span id="role-text" style="color:var(--pink)">"Fullstack Developer"</span><span class="cursor">&nbsp;</span>
+        </div>
+
+        <a href="#contact"
+          class="btn-glow rounded-full text-xs sm:text-sm uppercase tracking-widest font-medium px-8 py-3.5 sm:px-10 sm:py-4 text-center transition-shadow duration-300">
+          Let's Build
+        </a>
+      </div>
+
+      <p class="reveal mt-6 max-w-md text-sm sm:text-base leading-relaxed" style="color:var(--muted)">
+        I design and ship products, write content that doesn't read like AI, and run the social channels that get people
+        talking about both — mostly across the Web3 &amp; crypto space.
+      </p>
+    </div>
+
+    <!-- 3D / magnetic portrait -->
+    <div id="magnet-portrait"
+      class="reveal hidden md:block absolute right-6 md:right-10 lg:right-16 top-1/2 -translate-y-1/2 portrait-frame w-[220px] md:w-[280px] lg:w-[340px]"
+      style="transition: transform 0.3s ease-out;">
+      <img src="./Assets/Personal pfp.jpg" alt="Chidera Agbo — 3D portrait" loading="lazy" />
+    </div>
+  </header>
+
+  <!-- ============ MARQUEE ============ -->
+  <section class="py-10 md:py-14 overflow-hidden">
+    <div class="overflow-hidden mb-3">
+      <div class="marquee-track">
+        <div class="flex gap-3">
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Frontend Development</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">React.js</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Next.js</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">TypeScript</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">JavaScript</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">HTML5</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">CSS3</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">Tailwind CSS</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Responsive Web Design</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">Git</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">GitHub</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">Bug Fixing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Web Application Development</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">UI Implementation</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">API Integration</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">Software Testing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Code Review</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">Technical Documentation</span>
+        </div>
+        <div class="flex gap-3" aria-hidden="true">
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Frontend Development</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">React.js</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Next.js</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">TypeScript</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">JavaScript</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">HTML5</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">CSS3</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">Tailwind CSS</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Responsive Web Design</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">Git</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">GitHub</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">Bug Fixing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Web Application Development</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">UI Implementation</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">API Integration</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">Software Testing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Code Review</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">Technical Documentation</span>
+        </div>
+      </div>
+    </div>
+    <div class="overflow-hidden">
+      <div class="marquee-track marquee-track-rev">
+        <div class="flex gap-3">
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">Web3</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Blockchain Technology</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">Cryptocurrency</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">DeFi (Decentralized Finance)</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">Smart Contract Research</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Web3 Content Creation</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">Technical Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Content Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">Copywriting</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Blog Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">Social Media Content Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">X (Twitter) Thread Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">Storytelling</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Product Documentation</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">SEO Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Editing & Proofreading</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">Research Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Proposal Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">Problem Solving</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Online Research</span>
+        </div>
+        <div class="flex gap-3" aria-hidden="true">
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">Web3</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Blockchain Technology</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">Cryptocurrency</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">DeFi (Decentralized Finance)</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">Smart Contract Research</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Web3 Content Creation</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">Technical Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Content Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">Copywriting</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Blog Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">Social Media Content Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">X (Twitter) Thread Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">Storytelling</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Product Documentation</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">SEO Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Editing & Proofreading</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent2">Research Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Proposal Writing</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm accent">Problem Solving</span>
+          <span class="marquee-pill rounded-full px-5 py-2 text-xs sm:text-sm">Online Research</span>
+        </div>
+      </div>
+    </div>
+  </section>',old_string:
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" class="px-5 sm:px-8 md:px-12 py-20 md:py-32">
+    <div class="grid md:grid-cols-[1.1fr_1.4fr] gap-12 md:gap-16 items-center max-w-6xl mx-auto">
+      <div class="reveal-x-l portrait-frame max-w-sm mx-auto md:mx-0 w-full">
+        <img src="./Assets/Ninja pfp.png" alt="Chidera Agbo" loading="lazy" />
+      </div>
+      <div class="reveal-x-r">
+        <p class="mono uppercase tracking-[0.3em] text-xs md:text-sm mb-4" style="color:var(--muted)">About</p>
+        <h2 class="font-extrabold uppercase leading-[0.95] tracking-tight mb-6"
+          style="font-size:clamp(2.2rem,7vw,4.5rem)">
+          Two screens,<br />one <span class="grad-text">voice</span>.
+        </h2>
+        <p class="text-sm sm:text-base md:text-lg leading-relaxed mb-4" style="color:var(--text)">
+          I'm a Computer Science &amp; Statistics student at the University of Nigeria, Nsukka, and a builder who moves
+          between code editors and content calendars without missing a beat.
+        </p>
+        <p class="text-sm sm:text-base md:text-lg leading-relaxed mb-4" style="color:var(--muted)">
+          On one side, I build with React, Node.js, and Express — interfaces, dApps, and tools that work the way they're
+          supposed to. On the other, I write and manage social presence for Web3 and crypto projects, turning dense
+          protocol updates into stories people actually finish reading.
+        </p>
+        <p class="text-sm sm:text-base md:text-lg leading-relaxed" style="color:var(--muted)">
+          I've worked with teams across the Polkadot ecosystem and beyond — Booka, The BlockHive, Eth Enugu, and RevoFi
+          Network — wearing whichever hat the project needed that week.
+        </p>
+        <a href="#work"
+          class="btn-ghost inline-block rounded-full mt-8 text-xs sm:text-sm uppercase tracking-widest font-medium px-8 py-3.5 transition-colors duration-200">
+          See the work
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICES ============ -->
+  <section id="services" class="rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px]"
+    style="background:var(--paper);color:var(--ink);">
+    <div class="px-5 sm:px-8 md:px-12 py-20 sm:py-24 md:py-32 max-w-5xl mx-auto">
+      <p class="reveal mono uppercase tracking-[0.3em] text-xs md:text-sm mb-4" style="color:#9A958A">What I Do</p>
+      <h2 class="reveal font-extrabold uppercase leading-[0.95] tracking-tight mb-16 md:mb-20"
+        style="font-size:clamp(2.5rem,9vw,6rem)">
+        Services
+      </h2>
+
+      <div class="flex flex-col">
+        <!-- 01 -->
+        <div class="reveal flex flex-col sm:flex-row gap-4 sm:gap-10 py-8 sm:py-10 border-t"
+          style="border-color:rgba(10,10,14,0.15)">
+          <div class="font-extrabold leading-none" style="font-size:clamp(2.5rem,8vw,6rem)">01</div>
+          <div class="flex-1">
+            <h3 class="font-medium uppercase mb-2" style="font-size:clamp(1.1rem,2.2vw,2rem)">Fullstack Web Development
+            </h3>
+            <p class="leading-relaxed max-w-2xl opacity-60" style="font-size:clamp(0.9rem,1.6vw,1.2rem)">
+              React and TypeScript front ends, Node.js / Express back ends, and clean deployments — from dashboards and
+              dApp interfaces to full marketing sites.
+            </p>
+          </div>
+        </div>
+        <!-- 02 -->
+        <div class="reveal flex flex-col sm:flex-row gap-4 sm:gap-10 py-8 sm:py-10 border-t"
+          style="border-color:rgba(10,10,14,0.15)">
+          <div class="font-extrabold leading-none" style="font-size:clamp(2.5rem,8vw,6rem)">02</div>
+          <div class="flex-1">
+            <h3 class="font-medium uppercase mb-2" style="font-size:clamp(1.1rem,2.2vw,2rem)">Web3 &amp; Crypto Content
+              Writing</h3>
+            <p class="leading-relaxed max-w-2xl opacity-60" style="font-size:clamp(0.9rem,1.6vw,1.2rem)">
+              Long-form explainers, project breakdowns, and threads that translate protocol-speak into stories people
+              share — written to sound like a person, not a press release.
+            </p>
+          </div>
+        </div>
+        <!-- 03 -->
+        <div class="reveal flex flex-col sm:flex-row gap-4 sm:gap-10 py-8 sm:py-10 border-t"
+          style="border-color:rgba(10,10,14,0.15)">
+          <div class="font-extrabold leading-none" style="font-size:clamp(2.5rem,8vw,6rem)">03</div>
+          <div class="flex-1">
+            <h3 class="font-medium uppercase mb-2" style="font-size:clamp(1.1rem,2.2vw,2rem)">Social Media Management
+            </h3>
+            <p class="leading-relaxed max-w-2xl opacity-60" style="font-size:clamp(0.9rem,1.6vw,1.2rem)">
+              Day-to-day management of X, Discord, and community channels — content calendars, engagement, and campaign
+              support for Web3 communities.
+            </p>
+          </div>
+        </div>
+        <!-- 04 -->
+        <div class="reveal flex flex-col sm:flex-row gap-4 sm:gap-10 py-8 sm:py-10 border-t border-b"
+          style="border-color:rgba(10,10,14,0.15)">
+          <div class="font-extrabold leading-none" style="font-size:clamp(2.5rem,8vw,6rem)">04</div>
+          <div class="flex-1">
+            <h3 class="font-medium uppercase mb-2" style="font-size:clamp(1.1rem,2.2vw,2rem)">Brand &amp; Video
+              Scripting</h3>
+            <p class="leading-relaxed max-w-2xl opacity-60" style="font-size:clamp(0.9rem,1.6vw,1.2rem)">
+              Scene-by-scene video scripts, prompt sheets, and programmatic video builds (Remotion) for product launches
+              and announcements.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROOF OF WORK ============ -->
+  <section id="work"
+    class="rounded-t-[40px] sm:rounded-t-[50px] md:rounded-t-[60px] -mt-10 sm:-mt-12 md:-mt-14 relative z-10"
+    style="background:var(--bg);">
+    <div class="px-5 sm:px-8 md:px-12 py-20 sm:py-24 md:py-32 max-w-5xl mx-auto">
+      <p class="reveal mono uppercase tracking-[0.3em] text-xs md:text-sm mb-4" style="color:var(--muted)">Selected Work
+      </p>
+      <h2 class="reveal grad-text font-extrabold uppercase leading-[0.95] tracking-tight mb-4"
+        style="font-size:clamp(2.5rem,9vw,6rem)">
+        Proof of Work
+      </h2>
+      <p class="reveal max-w-xl mb-16 md:mb-20 text-sm sm:text-base" style="color:var(--muted)">
+        A growing log of things I've shipped — code, copy, and campaigns. Each card below is a slot: swap the
+        placeholder text, links, and images for your latest project as you go.
+      </p>
+
+      <!-- WORK ITEM 01 -->
+      <div class="reveal grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-10 items-start py-8 sm:py-10 border-t"
+        style="border-color:rgba(236,234,230,0.12)">
+        <span class="mono text-xs sm:text-sm px-3 py-1 rounded-full border"
+          style="border-color:rgba(230,0,122,0.4);color:var(--pink);width:fit-content">Development</span>
+        <div>
+          <h3 class="font-medium uppercase mb-2" style="font-size:clamp(1.1rem,2.2vw,1.8rem)">Katakana — Cross-Chain
+            Bridge Interface</h3>
+          <p class="leading-relaxed mb-4" style="color:var(--muted);font-size:clamp(0.9rem,1.6vw,1.1rem)">
+            A dark, cyberpunk-styled bridge UI for Polkadot's XCM, with a mock token-swap flow across ten tokens and
+            multiple networks. Built with vanilla HTML, CSS, and JavaScript.
+          </p>
+          <a href="https://eischideraa-unn.github.io/Katakana/" target="_blank" rel="noopener"
+            class="btn-ghost inline-block rounded-full text-xs uppercase tracking-widest font-medium px-6 py-2.5 transition-colors duration-200">
+            View Project ↗
+          </a>
+          <div class="reveal grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-10 items-start py-8 sm:py-10 border-t"
+            style="border-color:rgba(236,234,230,0.12)">
+            <span class="mono text-xs sm:text-sm px-3 py-1 rounded-full border"
+              style="border-color:rgba(255,138,30,0.4);color:var(--amber);width:fit-content">Tool / AI</span>
+            <div>
+              <h3 class="font-medium uppercase mb-2" style="font-size:clamp(1.1rem,2.2vw,1.8rem)">Humanizer — AI Writing
+                Cleanup App</h3>
+              <p class="leading-relaxed mb-4" style="color:var(--muted);font-size:clamp(0.9rem,1.6vw,1.1rem)">
+                A two-panel web app powered by the Claude API that strips AI writing patterns from drafts through a
+                draft → audit → rewrite pipeline, used in my own crypto content workflow.
+              </p>
+              <a href="https://eischideraa-unn.github.io/Humanizer-Ai-Tool/" target="_blank" rel="noopener"
+                class="btn-ghost inline-block rounded-full text-xs uppercase tracking-widest font-medium px-6 py-2.5 transition-colors duration-200">
+                View Project ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- WORK ITEM 03 -->
+          <div class="reveal grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-10 items-start py-8 sm:py-10 border-t"
+            style="border-color:rgba(236,234,230,0.12)">
+            <span class="mono text-xs sm:text-sm px-3 py-1 rounded-full border"
+              style="border-color:rgba(230,0,122,0.4);color:var(--pink);width:fit-content">Content / Web3</span>
+            <div>
+              <h3 class="font-medium uppercase mb-2" style="font-size:clamp(1.1rem,2.2vw,1.8rem)">JAM Protocol —
+                Long-Form Explainer</h3>
+              <p class="leading-relaxed mb-4" style="color:var(--muted);font-size:clamp(0.9rem,1.6vw,1.1rem)">
+                A humanized deep-dive into the Join-Accumulate Machine, covering progress across five independent
+                implementation teams — written for readers who aren't core developers.
+              </p>
+              <a href="https://x.com/eischideraa_unn/status/2043528165876756794" target="_blank" rel="noopener"
+                class="btn-ghost inline-block rounded-full text-xs uppercase tracking-widest font-medium px-6 py-2.5 transition-colors duration-200">
+                Read Article ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- WORK ITEM 04 -->
+          <div class="reveal grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-10 items-start py-8 sm:py-10 border-t"
+            style="border-color:rgba(236,234,230,0.12)">
+            <span class="mono text-xs sm:text-sm px-3 py-1 rounded-full border"
+              style="border-color:rgba(255,138,30,0.4);color:var(--amber);width:fit-content">Video / Campaign</span>
+            <div>
+              <h3 class="font-medium uppercase mb-2" style="font-size:clamp(1.1rem,2.2vw,1.8rem)">REAL Finance — RWA
+                Video &amp; Thread Campaign</h3>
+              <p class="leading-relaxed mb-4" style="color:var(--muted);font-size:clamp(0.9rem,1.6vw,1.1rem)">
+                A full video script with scene-by-scene image and motion prompts, paired with a seven-tweet X thread
+                strategy for a real-world asset tokenization launch.
+              </p>
+              <a href="https://x.com/eischideraa_unn/status/2060698574732546264" target="_blank" rel="noopener"
+                class="btn-ghost inline-block rounded-full text-xs uppercase tracking-widest font-medium px-6 py-2.5 transition-colors duration-200">
+                View Campaign ↗
+              </a>
+            </div>
+          </div>
+
+          <!-- Dynamically added proof-of-work items render here -->
+          <div id="pow-list"></div>
+
+          <!-- Owner-only: add new proof of work -->
+          <!-- <div class="reveal flex flex-col items-center gap-4 pt-10">
+            <button id="pow-add-btn" type="button"
+              class="btn-ghost rounded-full text-xs sm:text-sm uppercase tracking-widest font-medium px-8 py-3.5 transition-colors duration-200">
+              + Add Proof of Work
+            </button>
+            <p class="mono text-xs" style="color:var(--muted)">Owner-only — requires passcode</p>
+          </div> -->
+
+          <!-- Hidden add-entry form -->
+          <form id="pow-form" class="reveal hidden flex-col gap-4 mt-8 max-w-xl mx-auto" style="display:none;">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <input id="pow-category" type="text" placeholder="Category (e.g. Development)" required
+                class="w-full rounded-2xl px-5 py-3.5 text-sm bg-transparent border focus:outline-none focus:ring-2"
+                style="border-color:rgba(236,234,230,0.2); color:var(--text);" />
+              <input id="pow-link" type="url" placeholder="Link (https://...)" required
+                class="w-full rounded-2xl px-5 py-3.5 text-sm bg-transparent border focus:outline-none focus:ring-2"
+                style="border-color:rgba(236,234,230,0.2); color:var(--text);" />
+            </div>
+            <input id="pow-title" type="text" placeholder="Project title" required
+              class="w-full rounded-2xl px-5 py-3.5 text-sm bg-transparent border focus:outline-none focus:ring-2"
+              style="border-color:rgba(236,234,230,0.2); color:var(--text);" />
+            <textarea id="pow-desc" placeholder="Short description" rows="3" required
+              class="w-full rounded-2xl px-5 py-3.5 text-sm bg-transparent border focus:outline-none focus:ring-2 resize-none"
+              style="border-color:rgba(236,234,230,0.2); color:var(--text);"></textarea>
+            <div class="flex gap-3 justify-center">
+              <button type="submit"
+                class="btn-glow rounded-full text-xs uppercase tracking-widest font-medium px-8 py-3.5 transition-shadow duration-300">
+                Save Entry
+              </button>
+              <button type="button" id="pow-cancel"
+                class="btn-ghost rounded-full text-xs uppercase tracking-widest font-medium px-8 py-3.5 transition-colors duration-200">
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="px-5 sm:px-8 md:px-12 py-24 sm:py-28 md:py-36">
+    <div class="text-center max-w-2xl mx-auto">
+      <p class="reveal mono uppercase tracking-[0.3em] text-xs md:text-sm mb-4" style="color:var(--muted)">Get In Touch
+      </p>
+      <h2 class="reveal grad-text font-extrabold uppercase leading-[0.95] tracking-tight mb-8"
+        style="font-size:clamp(2.5rem,12vw,8rem)">
+        Let's talk
+      </h2>
+      <p class="reveal mb-10 text-sm sm:text-base" style="color:var(--muted)">
+        Whether it's a product to build, a story to write, or a community to grow — drop a message below and it'll land
+        straight in my inbox.
+      </p>
+    </div>
+
+    <!-- Functional contact form -> delivers to Gmail via FormSubmit -->
+    <form id="contact-form" class="reveal max-w-xl mx-auto flex flex-col gap-4"
+      action="https://formsubmit.co/agbochidera95@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New message from your portfolio site!" />
+      <input type="hidden" name="_template" value="box" />
+      <input type="hidden" name="_captcha" value="false" />
+      <div class="grid sm:grid-cols-2 gap-4">
+        <input type="text" name="name" placeholder="Your name" required
+          class="w-full rounded-2xl px-5 py-3.5 text-sm bg-transparent border focus:outline-none focus:ring-2"
+          style="border-color:rgba(236,234,230,0.2); color:var(--text);" />
+        <input type="email" name="email" placeholder="Your email" required
+          class="w-full rounded-2xl px-5 py-3.5 text-sm bg-transparent border focus:outline-none focus:ring-2"
+          style="border-color:rgba(236,234,230,0.2); color:var(--text);" />
+      </div>
+      <input type="text" name="subject" placeholder="Subject"
+        class="w-full rounded-2xl px-5 py-3.5 text-sm bg-transparent border focus:outline-none focus:ring-2"
+        style="border-color:rgba(236,234,230,0.2); color:var(--text);" />
+      <textarea name="message" placeholder="Tell me about the project..." rows="5" required
+        class="w-full rounded-2xl px-5 py-3.5 text-sm bg-transparent border focus:outline-none focus:ring-2 resize-none"
+        style="border-color:rgba(236,234,230,0.2); color:var(--text);"></textarea>
+
+      <button type="submit"
+        class="btn-glow rounded-full text-xs sm:text-sm uppercase tracking-widest font-medium px-8 sm:px-10 py-3.5 sm:py-4 transition-shadow duration-300 self-center mt-2">
+        Send Message
+      </button>
+      <p id="form-status" class="text-xs mt-1 text-center" style="color:var(--muted)"></p>
+    </form>
+
+    <div class="reveal flex flex-wrap items-center justify-center gap-4 mt-10">
+      <!-- <a href="mailto:agbochidera95@gmail.com
+        class=" btn-ghost rounded-full text-xs sm:text-sm uppercase tracking-widest font-medium px-8 sm:px-10 py-3.5
+        sm:py-4 transition-colors duration-200">
+        Email Directly
+      </a> -->
+      <a href="https://x.com/eischideraa_unn" target="_blank" rel="noopener"
+        class="btn-ghost rounded-full text-xs sm:text-sm uppercase tracking-widest font-medium px-8 sm:px-10 py-3.5 sm:py-4 transition-colors duration-200">
+        X / Twitter
+      </a>
+      <a href="https://github.com/eischideraa-unn" target="_blank" rel="noopener"
+        class="btn-ghost rounded-full text-xs sm:text-sm uppercase tracking-widest font-medium px-8 sm:px-10 py-3.5 sm:py-4 transition-colors duration-200">
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/chidera-agbo-636ab4398" target="_blank" rel="noopener"
+        class="btn-ghost rounded-full text-xs sm:text-sm uppercase tracking-widest font-medium px-8 sm:px-10 py-3.5 sm:py-4 transition-colors duration-200">
+        LinkedIn
+      </a>
+    </div>
+
+    <p class="text-center mt-20 mono text-xs" style="color:var(--muted)">© <span id="year"></span> Chidera Agbo — Enugu,
+      Nigeria</p>
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
